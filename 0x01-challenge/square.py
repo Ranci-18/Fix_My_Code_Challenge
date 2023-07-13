@@ -22,7 +22,10 @@ class Square():
 
     def __str__(self):
         """String representation of square object"""
-        return "{}/{}".format(self.width, self.height)
+        symbol = '#'
+        sqre = symbol * self.width + '\n'
+        sqre *= self.height
+        return sqre.rstrip()
 
 
 if __name__ == "__main__":
