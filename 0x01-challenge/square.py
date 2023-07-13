@@ -10,7 +10,8 @@ class Square():
     def __init__(self, *args, **kwargs):
         """init method"""
         for key, value in kwargs.items():
-            setattr(self, key, value)
+            if value >= 0:
+                setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
